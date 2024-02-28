@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+body {
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMR7QRxXoX7gsaoAZF9fTFuK_rCr19lwbd-BAl2l-A96nqSYMQ_CF6qdviH_9rNUvTR5BpWeXdyIz5DQSj3vzPXlH_qHO_pGZrsNy8EPfQZCSOjSGQ=w1920-h1080');
+    font-family: 'Bricolage Grotesque', sans-serif !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding-left: 50%;
+    padding-right: 200px;
+}
+
+@media (max-width: 978px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.container-lg {
+    background-color: #1A1E76;
+    height: 400px;
+    max-width: 350px;
+    border-radius: 20px;
+}
+
+#login-container {
+    h1 {
+        font-size-adjust: 50px;
+        color: white;
+    }
+
+    #ulabel {
+        color: white;
+    }
+
+    #plabel {
+        color: white;
+    }
+
+    #btnLogin {
+        width: 150px;
+    }
+}
