@@ -12,10 +12,10 @@ body {
     background-attachment: fixed;
     margin: 0;
     padding-left: 50%;
-    padding-right: 200px;
+    padding-right: 15%;
 }
 
-@media (max-width: 978px) {
+@media (max-width: 881px) {
     body {
         padding-left: 20px;
         padding-right: 20px;
@@ -27,12 +27,25 @@ body {
     height: 400px;
     max-width: 350px;
     border-radius: 20px;
+    box-shadow: 5px 6px 4px 0px rgba(10, 7, 36, 0.73);
 }
 
 #login-container {
     h1 {
-        font-size-adjust: 50px;
+        font-size: 50px;
         color: white;
+        align-content: center;
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.85);
+    }
+
+    .input-group {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .input-group-text {
+        background-color: transparent;
+        border-radius: 10px;
     }
 
     #ulabel {
@@ -45,5 +58,11 @@ body {
 
     #btnLogin {
         width: 150px;
+        font-size: 20px;
+        box-shadow: 3px 3px 0px 0px rgb(12, 9, 51);
+    }
+
+    #forgot-pass {
+        color: rgb(184, 238, 255);
     }
 }
