@@ -51,7 +51,7 @@ header .navb-items {
 
 header .item {
     text-align: center;
-    margin-inline: 15%;
+    margin-inline: 10%;
     font-size: 20px;
     letter-spacing: 3px;
     color: #000;
@@ -62,9 +62,28 @@ header .item {
     cursor: pointer;
 }
 
+header .item a {
+    text-decoration: none;
+    color: #1d7fc0;
+    font-weight: 500;
+}
+
+header .navb-items .logout-navb {
+    margin-left: 25px;
+}
+
+header .line {
+    border-left: 1px solid rgba(0, 0, 0, 0.377);
+    height: 60px;
+}
+
 header .item:hover {
     border-bottom: 3px solid #63c1ff;
     border-top: 3px solid #63c1ff;
+}
+
+header .navbar-fixed-top {
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.62);
 }
 
 .modal-dialog {
@@ -137,7 +156,7 @@ header .item:hover {
     padding: 0 0 3px;
 }
 
-.container-fluid .img-fluid {
+.image-mnl .img-fluid {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -145,3 +164,83 @@ header .item:hover {
     align-items: center;
     justify-content: space-between;
 }
+
+.box-display-popl {
+    border: 4px solid #337e29;
+    border-radius: 20px;
+    width: 250px;
+    height: 150px;
+    background-color: #fefefe;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.62);
+}
+
+    .box-display-popl .text-start {
+        color: #337e29;
+        font-weight: 700;
+    }
+
+    .box-display-popl .text-end {
+        color: #337e29;
+        font-weight: 500;
+        font-size: 70px;
+    }
+
+.box-display-females {
+    border: 4px solid #8b216c;
+    border-radius: 20px;
+    width: 250px;
+    height: 150px;
+    background-color: #fefefe;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.62);
+}
+
+    .box-display-females .text-start {
+        color: #8b216c;
+        font-weight: 700;
+    }
+
+    .box-display-females .text-end {
+        color: #8b216c;
+        font-weight: 500;
+        font-size: 70px;
+    }
+
+.box-display-males {
+    border: 4px solid #131b5e;
+    border-radius: 20px;
+    width: 250px;
+    height: 150px;
+    background-color: #fefefe;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.62);
+}
+
+    .box-display-males .text-start {
+        color: #131b5e;
+        font-weight: 700;
+    }
+
+    .box-display-males .text-end {
+        color: #131b5e;
+        font-weight: 500;
+        font-size: 70px;
+    }
+
+.box-display-legal {
+    border: 4px solid #6d0909;
+    border-radius: 20px;
+    width: 250px;
+    height: 150px;
+    background-color: #fefefe;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.62);
+}
+
+    .box-display-legal .text-start {
+        color: #6d0909;
+        font-weight: 700;
+    }
+
+    .box-display-legal .text-end {
+        color: #6d0909;
+        font-weight: 500;
+        font-size: 70px;
+    }
