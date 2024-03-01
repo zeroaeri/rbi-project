@@ -13,7 +13,7 @@
         <script src="https://kit.fontawesome.com/4b82c45eb7.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="navbar navbar-default navbar-fixed-top">
+        <header class="navbar navbar-default fixed-top">
             <div class="container-fluid">
                 <div class="navb-logo">
                     <img src="https://lh3.googleusercontent.com/pw/AP1GczN73bI1c10ck4ILK4iEVR4av6Sr5Ypl06H_-RE2boTM_1IlD_LmOs4-WYdysIPdx6YOjcxUySQnjhWvprssmzOenzukPpaafNtufALDpX7Pf31I1Ic=w1920-h1080" alt="logo-needed" class="img-fluid">
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="modal fade" id="navbModal" tabindex="-1" role="dialog" aria-labelledby="navbModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog navigation">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <div class="navb-logo">
@@ -107,13 +107,213 @@
             </div>
         </div>
 
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row my-4 mx-0">
+                    <div class="col d-flex justify-content-center">
+                        <div class="box-display-resident">
+                            <h1 class="text-center mt-3">All Residents</h1>
+                            <table class="resident-table table table-striped d-flex justify-content-center">
+                                <tr class="table-info text-center">
+                                    <th class="d-none d-sm-table-cell d-md-table-cell">Barangay</th>
+                                    <th class="">Name</th>
+                                    <th class="d-none d-sm-table-cell d-md-table-cell">Sex</th>
+                                    <th class="d-none d-sm-table-cell d-md-table-cell">Age</th>
+                                    <th class="d-none d-md-table-cell">Civil Status</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                                <tr>
+                                    <td class="d-none d-sm-table-cell d-md-table-cell">sample</td>
+                                    <td class="">sample</td>
+                                    <td class="d-none d-sm-table-cell d-md-table-cell">sample</td>
+                                    <td class="d-none d-sm-table-cell d-md-table-cell">sample</td>
+                                    <td class="d-none d-md-table-cell">sample</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info view-details-btn" data-toggle="modal" data-target="#detailsModal">View</button>
+                                    </td>
+                                </tr>                                                                                         
+                                <!-- <tr class="header-color text-center">
+                                    <th>Barangay</th>
+                                    <th>Name</th>
+                                    <th>Sex</th>
+                                    <th>Age</th>
+                                    <th>Birthday</th>
+                                    <th>Civil Status</th>
+                                    <th>Contact No.</th>
+                                    <th>Address</th>
+                                    <th>Religion</th>
+                                    <th>Nationality</th>
+                                    <th>Employed?</th>
+                                    <th>Email</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                                <tr>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th>sample</th>
+                                    <th><button type="button" class="btn btn-info view-details-btn">View</button></th>
+                                </tr>-->
+                            </table>
+
+                            <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="detailsModalLabel">Resident Details | <strong>Barangay <span id="barangay-details"></span></strong></h5>
+                                            <a href="#" class="fas fa-xmark" data-bs-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true"></span>
+                                            </a>
+                                        </div>
+                                        <div class="modal-body ps-5 pe-5">
+                                            <strong>Name:</strong>
+                                            <input type="text" class="form-control" id="name-form" disabled>
+                                            <span id="name-details" hidden></span>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p><strong>Sex:</strong> <input type="text" class="form-control" id="sex-form" disabled><span id="sex-details" hidden></span></p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p><strong>Age:</strong> <input type="text" class="form-control" id="age-form" disabled><span id="age-details" hidden></span></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p><strong>Civil Status:</strong> <input type="text" class="form-control" id="civil-status-form" disabled><span id="civil-status-details" hidden></span></p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p><strong>Contact No.:</strong> <input type="text" class="form-control" id="contact-form" disabled><span id="contact-details" hidden></span></p>
+                                                </div>
+                                            </div>
+                                            <p><strong>Full Address:</strong> <input type="text" class="form-control" id="address-form" disabled><span id="address-details" hidden></span></p>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p><strong>Birthday:</strong> <input type="text" class="form-control" id="birthday-form" disabled><span id="birthday-details" hidden></span></p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p><strong>Nationality:</strong> <input type="text" class="form-control" id="nationality-form" disabled><span id="nationality-details" hidden></span></p>
+                                                </div>
+                                            </div>
+                                            <p><strong>Religion:</strong> <input type="text" class="form-control" id="religion-form" disabled><span id="religion-details" hidden></span></p>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <p><strong>Employment Status:</strong> <input type="text" class="form-control" id="status-form" disabled><span id="status-details" hidden></span></p>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p><strong>Email:</strong> <input type="text" class="form-control" id="email-form" disabled><span id="email-details" hidden></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" id="update" class="btn btn-warning" onclick="enableSaveCancel();">Edit</button>
+                                            <button type="button" id="delete" class="btn btn-danger">Delete</button>
+                                            <button type="button" id="save" class="btn btn-outline-success" onclick="disableSaveCancel();" disabled>Save</button>
+                                            <button type="button" id="cancel" class="btn btn-outline-secondary" onclick="disableSaveCancel();" disabled>Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script>
             var modal;
 
-            // Function to show the modal
             function showModal() {
                 $('#navbModal').modal('show');
+                $("#navbModal").prependTo("body");
             }
+
+            function enableSaveCancel() {
+                document.getElementById('save').disabled = false;
+                document.getElementById('cancel').disabled = false;
+                document.getElementById('update').disabled = true;
+                document.getElementById('delete').disabled = true;
+
+                document.getElementById('name-form').disabled = false;
+                document.getElementById('sex-form').disabled = false;
+                document.getElementById('age-form').disabled = false;
+                document.getElementById('birthday-form').disabled = false;
+                document.getElementById('civil-status-form').disabled = false;
+                document.getElementById('contact-form').disabled = false;
+                document.getElementById('address-form').disabled = false;
+                document.getElementById('religion-form').disabled = false;
+                document.getElementById('nationality-form').disabled = false;
+                document.getElementById('status-form').disabled = false;
+                document.getElementById('email-form').disabled = false;
+            }
+
+            function disableSaveCancel() {
+                document.getElementById('save').disabled = true;
+                document.getElementById('cancel').disabled = true;
+                document.getElementById('update').disabled = false;
+                document.getElementById('delete').disabled = false;
+
+                document.getElementById('name-form').disabled = true;
+                document.getElementById('sex-form').disabled = true;
+                document.getElementById('age-form').disabled = true;
+                document.getElementById('birthday-form').disabled = true;
+                document.getElementById('civil-status-form').disabled = true;
+                document.getElementById('contact-form').disabled = true;
+                document.getElementById('address-form').disabled = true;
+                document.getElementById('religion-form').disabled = true;
+                document.getElementById('nationality-form').disabled = true;
+                document.getElementById('status-form').disabled = true;
+                document.getElementById('email-form').disabled = true;
+            }
+
+            document.querySelector('.view-details-btn').addEventListener('click', function () {
+                document.getElementById('barangay-details').innerText = 'sample';
+                document.getElementById('name-details').innerText = 'sample';
+                document.getElementById('sex-details').innerText = 'sample';
+                document.getElementById('age-details').innerText = 'sample';
+                document.getElementById('birthday-details').innerText = 'sample';
+                document.getElementById('civil-status-details').innerText = 'sample';
+                document.getElementById('contact-details').innerText = 'sample';
+                document.getElementById('address-details').innerText = 'sample';
+                document.getElementById('religion-details').innerText = 'sample';
+                document.getElementById('nationality-details').innerText = 'sample';
+                document.getElementById('status-details').innerText = 'sample';
+                document.getElementById('email-details').innerText = 'sample';
+                
+                $('#detailsModal').modal('show');
+
+                var nameDetails = document.getElementById('name-details').innerText;
+                var sexDetails = document.getElementById('sex-details').innerText;
+                var ageDetails = document.getElementById('age-details').innerText;
+                var birthdayDetails = document.getElementById('birthday-details').innerText;
+                var civilStatusDetails = document.getElementById('civil-status-details').innerText;
+                var contactDetails = document.getElementById('contact-details').innerText;
+                var addressDetails = document.getElementById('address-details').innerText;
+                var religionDetails = document.getElementById('religion-details').innerText;
+                var nationalityDetails = document.getElementById('nationality-details').innerText;
+                var statusDetails = document.getElementById('status-details').innerText;
+                var emailDetails = document.getElementById('email-details').innerText;
+
+                document.getElementById('name-form').value = nameDetails;
+                document.getElementById('sex-form').value = sexDetails;
+                document.getElementById('age-form').value = ageDetails;
+                document.getElementById('birthday-form').value = birthdayDetails;
+                document.getElementById('civil-status-form').value = civilStatusDetails;
+                document.getElementById('contact-form').value = contactDetails;
+                document.getElementById('address-form').value = addressDetails;
+                document.getElementById('religion-form').value = religionDetails;
+                document.getElementById('nationality-form').value = nationalityDetails;
+                document.getElementById('status-form').value = statusDetails;
+                document.getElementById('email-form').value = emailDetails;
+            });
         </script>
     </body>
 </html>
