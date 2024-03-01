@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Encode Info | Manila RBI</title>
+        <link href="encoding-styles.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/4b82c45eb7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="navbar navbar-default fixed-top">
+            <div class="container-fluid">
+                <div class="navb-logo">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczN73bI1c10ck4ILK4iEVR4av6Sr5Ypl06H_-RE2boTM_1IlD_LmOs4-WYdysIPdx6YOjcxUySQnjhWvprssmzOenzukPpaafNtufALDpX7Pf31I1Ic=w1920-h1080" alt="logo-needed" class="img-fluid">
+                </div>
+
+                <div class="navb-items d-none d-lg-flex"> <!-- Hide on small screens, show on large screens -->
+                    <div class="item">
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="active">Encode&nbsp;Info</a>
+                    </div>
+                    <div class="item">
+                        <a href="#">Account</a>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="logout-navb">
+                        <button type="button" class="btn btn-outline-danger logout-navb">LOGOUT</button>
+                    </div>
+                </div>
+
+                <div class="mobile-toggler d-lg-none">
+                    <a href="#" onclick="showModal();" id="modalToggle" data-bs-toggle="modal" data-bs-target="#navbModal">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+
+                <div class="modal fade" id="navbModal" tabindex="-1" role="dialog" aria-labelledby="navbModalLabel" aria-hidden="true">
+                    <div class="modal-dialog navigation">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="navb-logo">
+                                    <img src="https://lh3.googleusercontent.com/pw/AP1GczN73bI1c10ck4ILK4iEVR4av6Sr5Ypl06H_-RE2boTM_1IlD_LmOs4-WYdysIPdx6YOjcxUySQnjhWvprssmzOenzukPpaafNtufALDpX7Pf31I1Ic=w1920-h1080" alt="logo-needed" class="img-fluid">
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-xmark"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-line">
+                                    <a href="#"><i class="fas fa-house"></i>&nbsp;&nbsp;Home</a>
+                                </div>
+                                <div class="modal-line">
+                                    <a href="#"><i class="fas fa-pencil"></i>&nbsp;&nbsp;Encode Info</a>
+                                </div>
+                                <div class="modal-line">
+                                    <a href="#"><i class="fas fa-user"></i>&nbsp;&nbsp;Account</a>
+                                </div>
+                                <div class="logout-navb">
+                                    <button type="button" class="btn btn-outline-danger logout-navb">LOGOUT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="image-mnl container-fluid px-0 py-0">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczO8mu7-B_YBO0MR3_viM40nJNF782j-I1pgZOKIP_zXfajdVcGEWPcA3fsOMpzojsvFG__xh_z_xq66IWNvyi01_FrUZFCcuFrzF7PtEEkAd_BHlSY=w1920-h1080" class="img-fluid">
+        </div>
+
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row my-4 mx-0">
+                    <div class="col d-flex justify-content-center">
+                        <div class="box-display-resident h-100 mb-5">
+                            <h1 class="text-center mt-3">Add New Residents</h1>
+                            <div class="row ms-4 me-4 mt-3 d-flex justify-content-center">
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Last Name</h5>
+                                    <input type="text" class="form-control" id="last-name-form">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">First Name</h5>
+                                    <input type="text" class="form-control" id="first-name-form">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Middle Name</h5>
+                                    <input type="text" class="form-control" id="middle-name-form">
+                                </div>
+                            </div>
+                            <div class="row ms-4 me-4 mt-3 d-flex justify-content-center">
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Sex (at birth)</h5>
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline-secondary dropdown-toggle form-control text-end" type="button" id="sex-form" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Choose one...
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sex-form">
+                                            <li><a class="dropdown-item" href="#" onclick="showSex(this);">Male</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showSex(this);">Female</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showSex(this);">Intersex</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Birthday</h5>
+                                    <input type="date" class="form-control" id="birthday-form" onchange="calculateAge();">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Age</h5>
+                                    <input type="number" class="form-control" id="agee" disabled> <span id="age-form" hidden></span>
+                                </div>
+                            </div>
+                            <div class="row ms-4 me-4 mt-3 d-flex justify-content-center">
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Civil Status</h5>
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline-secondary dropdown-toggle form-control text-end" type="button" id="civil-status-form" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Choose one...
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="civil-status-form">
+                                            <li><a class="dropdown-item" href="#" onclick="showCivilStatus(this);">Single</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showCivilStatus(this);">Married</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showCivilStatus(this);">Separated</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showCivilStatus(this);">Annulled</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showCivilStatus(this);">Widowed</a></li>
+                                          </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Contact Number</h5>
+                                    <input type="number" class="form-control" id="contact-form">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Email Address</h5>
+                                    <input type="email" class="form-control" id="contact-form">
+                                </div>
+                            </div>
+                            <div class="row ms-4 me-4 mt-3 d-flex justify-content-center">
+                                <hr class="my-3 mx-5">
+                                <div class="d-flex justify-content-center">
+                                    <h2>Home Address</h2>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Block & Lot / House No.</h5>
+                                    <input type="text" class="form-control" id="bnl-form">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Street/Subdivision/Village</h5>
+                                    <input type="text" class="form-control" id="street-form">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Barangay</h5>
+                                    <input type="number" class="form-control" id="brgy-form">
+                                </div>
+                            </div>
+                            <div class="row ms-4 me-4 mt-3 d-flex justify-content-center">
+                                <hr class="my-3 mx-5">
+                                <div class="d-flex justify-content-center">
+                                    <h2>Current Status</h2>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Employment Status</h5>
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline-secondary dropdown-toggle form-control text-end" type="button" id="status-form" data-bs-toggle="dropdown" aria-expanded="false" onchange="handleEmploymentStatus();">
+                                            Choose one...
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="status-form">
+                                            <li><a class="dropdown-item" href="#" onclick="showEmployment(this);">Employed</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showEmployment(this);">Unemployed</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showEmployment(this);">Student</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="showEmployment(this);">N/A</a></li>
+                                          </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Occupation</h5>
+                                    <input type="text" class="form-control" id="work-form" disabled>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <h5 class="text-start">Barangay</h5>
+                                    <input type="number" class="form-control" id="brgy-form">
+                                </div>
+                            </div>
+                            <div class="button-group row ms-4 me-4 mt-3 d-flex justify-content-center text-center">
+                                <div class="mt-2 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-success btnz">REGISTER</button>
+                                </div>
+                                <div class="mt-2 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-warning btnz">UPDATE</button>
+                                </div>
+                                <div class="mt-2 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="button" class="btn btn-danger btnz">DELETE</button>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var modal;
+            var isChangesMade = false;
+
+            function showModal() {
+                $('#navbModal').modal('show');
+                $("#navbModal").prependTo("body");
+            }
+
+            function enableSaveCancel() {
+                document.getElementById('save').disabled = false;
+                document.getElementById('cancel').disabled = false;
+                document.getElementById('update').disabled = true;
+                document.getElementById('delete').disabled = true;
+
+                document.getElementById('name-form').disabled = false;
+                document.getElementById('sex-form').disabled = false;
+                document.getElementById('age-form').disabled = false;
+                document.getElementById('birthday-form').disabled = false;
+                document.getElementById('civil-status-form').disabled = false;
+                document.getElementById('contact-form').disabled = false;
+                document.getElementById('address-form').disabled = false;
+                document.getElementById('religion-form').disabled = false;
+                document.getElementById('nationality-form').disabled = false;
+                document.getElementById('status-form').disabled = false;
+                document.getElementById('email-form').disabled = false;
+
+                isChangesMade = true;
+            }
+
+            function disableSaveCancel() {
+                document.getElementById('save').disabled = true;
+                document.getElementById('cancel').disabled = true;
+                document.getElementById('update').disabled = false;
+                document.getElementById('delete').disabled = false;
+
+                document.getElementById('name-form').disabled = true;
+                document.getElementById('sex-form').disabled = true;
+                document.getElementById('age-form').disabled = true;
+                document.getElementById('birthday-form').disabled = true;
+                document.getElementById('civil-status-form').disabled = true;
+                document.getElementById('contact-form').disabled = true;
+                document.getElementById('address-form').disabled = true;
+                document.getElementById('religion-form').disabled = true;
+                document.getElementById('nationality-form').disabled = true;
+                document.getElementById('status-form').disabled = true;
+                document.getElementById('email-form').disabled = true;
+
+                isChangesMade = false;
+            }
+
+            function showCivilStatus(item) {
+                document.getElementById("civil-status-form").innerHTML = item.innerHTML;
+            }
+
+            function showSex(item) {
+                document.getElementById("sex-form").innerHTML = item.innerHTML;
+            }
+
+            function showEmployment(item) {
+                document.getElementById("status-form").innerHTML = item.innerHTML;
+            
+                var statusDropdown = document.getElementById('status-form');
+                var occupationInput = document.getElementById('work-form');
+
+                var selectedStatus = statusDropdown.innerHTML;
+
+                if (selectedStatus === 'Employed') {
+                    occupationInput.disabled = false;
+                    occupationInput.value = '';
+                } else {
+                    occupationInput.disabled = true;
+                    occupationInput.value = 'N/A';
+                }
+            }
+
+            function calculateAge() {
+                var birthdateInput = document.getElementById('birthday-form').value;
+                var birthdate = new Date(birthdateInput);
+
+                var currentDate = new Date();
+                var age = currentDate.getFullYear() - birthdate.getFullYear();
+
+                if (currentDate.getMonth() < birthdate.getMonth() ||
+                    (currentDate.getMonth() === birthdate.getMonth() && currentDate.getDate() < birthdate.getDate())) {
+                    age--;
+                }
+
+                document.getElementById('agee').value = age;
+            }
+        </script>
+    </body>
+</html>
