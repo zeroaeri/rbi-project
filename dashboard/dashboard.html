@@ -230,6 +230,7 @@
 
         <script>
             var modal;
+            var isChangesMade = false;
 
             function showModal() {
                 $('#navbModal').modal('show');
@@ -253,6 +254,8 @@
                 document.getElementById('nationality-form').disabled = false;
                 document.getElementById('status-form').disabled = false;
                 document.getElementById('email-form').disabled = false;
+
+                isChangesMade = true;
             }
 
             function disableSaveCancel() {
@@ -272,6 +275,8 @@
                 document.getElementById('nationality-form').disabled = true;
                 document.getElementById('status-form').disabled = true;
                 document.getElementById('email-form').disabled = true;
+
+                isChangesMade = false;
             }
 
             document.querySelector('.view-details-btn').addEventListener('click', function () {
