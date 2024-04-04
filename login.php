@@ -145,12 +145,10 @@ button:hover {
     background-color: #228B22 ;
 }
 .header-image {
-    background-image: url(images/logos.png);
+    background-image: url(images/cityhall3.jpg);
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-size: 100%;
-    border-style: groove;
-
     background-repeat: no-repeat;
     text-align: center;
     width: 100%; 
