@@ -161,7 +161,7 @@ header .navbar {
 }
 
 .box-display-popl {
-    border: 4px solid #337e29;
+    border: 4px solid #005db4;
     border-radius: 20px;
     width: 250px;
     height: 150px;
@@ -170,12 +170,12 @@ header .navbar {
 }
 
     .box-display-popl .text-start {
-        color: #337e29;
+        color: #005db4;
         font-weight: 700;
     }
 
     .box-display-popl .text-end {
-        color: #337e29;
+        color: #005db4;
         font-weight: 500;
         font-size: 70px;
     }
