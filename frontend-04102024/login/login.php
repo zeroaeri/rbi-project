@@ -1,3 +1,66 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+//phpinfo();
+
+// Start session
+session_start();
+
+$host = "localhost";
+$port = 3000;
+$socket = "";
+$user = "root";
+$password = "";
+$dbname = "barangay_db";
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected";
+
+    // Use isset to check if the keys are set in the $_POST array
+    $username = isset($_POST['username']) ? trim($_POST['username']) : '';
+    $password = isset($_POST['password']) ? trim($_POST['password']) : '';
+
+    // Debugging statement
+    //echo "Username: $username <br>";
+
+    $sql = "SELECT id, username, role, password FROM users WHERE username = :username AND password = :password";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':password', $password);
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($result !== false) {
+        $_SESSION['user_id'] = $result['id'];
+        $_SESSION['username'] = $result['username'];
+        $_SESSION['role'] = $result['role'];
+        $_SESSION['password'] = $result['password'];
+
+        if ($result['role'] == 'superadmin') {
+            header("Location: ../rbi-04102024/admin_homepage.php");
+            exit;
+        } else if ($result['role'] == 'barangay') {
+            header("Location: ../rbi-04102024/barangay_homepage.php");
+            exit;
+        }
+        else {
+            header("Location: ../rbi-04102024/dilg_homepage.php");
+            exit;
+        }
+    } else {
+        $error = "Invalid username or password.";
+    }
+} catch(PDOException $e) {
+    //echo "Error: " . $e->getMessage();
+}
+
+$conn = null;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +74,9 @@
 <body class="body1">
     <div class="box">
         <div class="header-image"></div>
-        <h1>Registry of Barangay Inhabitants</h1>
+        <h1>Manila Registry of Barangay Inhabitants</h1>
         <hr style="width: 350px; margin-top: -8px; margin-bottom: 18px; background-color: #05050550; height: 1px;">
-        <form action="process_login.php" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label class="input-label">
                 <span class="login__icon fas fa-user"></span>
                 <input type="text" name="username" placeholder="  Username" required>
